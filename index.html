@@ -1,54 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
         .h1 {
-    text-align: center;
-    width: 400px;
-    height: 200px;
-    background-color: hsl(120, 57%, 42%);
-    margin: auto;
+            text-align: center;
+            width: 100%x;
+            height: 200px;
+            background-color: hsl(120, 57%, 42%);
+            margin: auto;
+        }
+
+        h1 {
+            margin: auto;
+            padding-top: 75px;
+        }
+
+        img {
+            width: 200px;
+            height: 100px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0a0a1e;
+        }
+
+        a :hover {
+            color: #0a8191;
+        }
+
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+            }
+
+            a {
+                padding: 5px;
+                color: #0a8191;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+margin: 20px;
 }
 
-h1 {
-    margin: auto;
-    padding-top: 75px;
+form {
+max-width: 400px;
+margin: auto;
+padding: 20px;
+border: 1px solid #ddd;
+border-radius: 5px;
+background-color: #f9f9f9;
 }
-
-img {
-    width: 200px;
-    height: 100px; 
+label {
+display: block;
+margin-bottom: 5px;
 }
-
-a {
-    text-decoration: none;
-    color: #0a0a1e;
+input, select, textarea {
+width: 100%;
+padding: 8px;
+margin-bottom: 10px;
+border-radius: 4px;
+border: 1px solid #ccc;
 }
-
-a :hover {
-    color: #0a8191;
+input[type="submit"] {
+background-color: #4CAF50;
+color: white;
+cursor: pointer;
+width: auto;
 }
-
-
-    </style>
+input[type="submit"]:hover {
+background-color: #45a049;
+}
+</style>
     <title>ASSIGNMENT</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="header" class="h1">
         <h1>MY FIRST WEBPAGE</h1>
     </div>
     <div id="scroll" class="contact">
-        <a href="">Webpage Contents</a>
-        <a href="">Information Table</a>
-        <a href="">Contact Form</a>
+        <a href="#webpage">Webpage Contents</a>
+        <a href="#table">Information Table</a>
+        <a href="#contact">Contact Form</a>
         <picture>
-            <img src="https://www.shutterstock.com/shutterstock/photos/2475719167/display_1500/stock-photo-web-development-writting-on-table-background-2475719167.jpg" alt="An image with text web development">
+            <img src="https://www.shutterstock.com/shutterstock/photos/2475719167/display_1500/stock-photo-web-development-writting-on-table-background-2475719167.jpg"
+                alt="An image with text web development" />
         </picture>
-        <p> An image</p>
+        <p>
+            This is a sample paragraph decribing the contents of a webpage. It
+            explains the purpose of the page and provides some basic information
+            about users are to expect.
+        </p>
+        <div>
+            <h3 id="webpage">Webpage Contents</h3>
+            <ul>
+                <li>Introduction</li>
+                <li>Table of Information</li>
+                <li>Contact Form</li>
+            </ul>
+        </div>
 
+        <table id="table">
+            <caption>
+                Information Table
+            </caption>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pen</td>
+                    <td>Blue Ink Pen</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Notebooks</td>
+                    <td>Spinbound Notebooks</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Markers</td>
+                    <td>Permanent Markers</td>
+                    <td>2</td>
+                </tr>
+            </tbody>
+        </table>
 
+        <h3 id="contact">Contact Form</h3>
+        <form action="#" method="get">
+            <div>
+                <label for="name">Name:</label>
+                <input type="name" placeholder="John Doe">
+            </div><br>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" placeholder="youremail@email.com">
+            </div>  <br>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" placeholder="yourpassword">
+            </div>  <br>
+            <div>
+                <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div> <br>
+            <div>
+                <label for="subscribe">Subscribe:</label>
+                <input type="checkbox" id="subscribe" name="subscribe">
+                <label for="yes">Yes I Subcribe</label><br>
+            </div><br>
+            <div>
+                <label for="items">Number of Items</label>
+                <select name="Items" id="">
+                    <option value="pen">Pen</option>
+                    <option value="marker">Marker</option>
+                    <option value="notebook">Notebook</option>
+                </select>
+            </div><br>
+            <div>
+                <label for="date">Date:</label>
+                <input type="date">
+            </div><br>
+        </form>
+        <div>
+            <label for="message">Message</label><br>
+            <textarea name="message" id="message">Message</textarea>
+        </div>
+
+        <button>Submit</button>
     </div>
-  </body>
+
+</body>
+
 </html>
